@@ -12,6 +12,11 @@ export default Route.extend({
       dev.save().then(()=>{
         this.transitionTo("developers");
       });
+    },
+    cancel:function () {
+      this.modelFor("developers.new").rollback();
+      this.transitionTo("developers");
+
     }
   }
 });

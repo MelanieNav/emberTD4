@@ -11,8 +11,11 @@
     <tr>
       <td>{{dev.identity}}</td>
       <i class="large icons">
-        <i class="eraser icon"></i>
-        <i class="inverted corner add icon"></i>
+        <i {{action "modify" model}} class="edit outline icon"></i>
+      </i>
+      &nbsp;&nbsp;
+      <i class="large icons">
+        <i {{action "delete" model}} class="window close outline icon"></i>
       </i>
     </tr>
   {{/each}}
