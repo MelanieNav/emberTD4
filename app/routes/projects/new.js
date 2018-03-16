@@ -14,7 +14,8 @@ export default Route.extend({
       });
     },
     cancel:function () {
-
+      this.modelFor("projects.new").rollback();
+      this.transitionTo("projects");
     }
   }
 });
