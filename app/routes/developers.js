@@ -9,16 +9,8 @@ export default Route.extend({
 
   },
   actions:{
-    modify(){
-      this.get('store').findRecord('developer', 1).then(function(update) {
-        update.set('name', "");
-      });
-
-    },
-    delete:function () {
-      store.findRecord('post', 2, { backgroundReload: false }).then(function(post) {
-        post.destroyRecord();
-      });
+     delete:function (dev) {
+       dev.destroyRecord();
     },
     cancelDeletion:function (deleteds) {
       deleteds.forEach(

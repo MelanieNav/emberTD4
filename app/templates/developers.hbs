@@ -7,18 +7,20 @@
   </tr>
   </thead>
   <tbody>
+  <th>
   {{#each model as |dev|}}
     <tr>
       <td>{{dev.identity}}</td>
       <i class="large icons">
-        <i {{action "modify" model}} class="edit outline icon"></i>
+        {{#link-to "developers.update" dev}}<i class="edit outline icon" ></i>{{/link-to}}
       </i>
       &nbsp;&nbsp;
       <i class="large icons">
-        <i {{action "delete" model}} class="window close outline icon"></i>
+        <i {{action "delete" dev}} class="window close outline icon"></i>
       </i>
     </tr>
   {{/each}}
+  </th>
   </tbody>
 </table>
 
