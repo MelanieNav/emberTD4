@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('developers', function() {
     this.route('new');
     this.route('update',{path:'update/:identity'});
+    this.route('delete');
   });
 });
 

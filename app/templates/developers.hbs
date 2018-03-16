@@ -14,9 +14,8 @@
       <i class="large icons">
         {{#link-to "developers.update" dev}}<i class="edit outline icon" ></i>{{/link-to}}
       </i>
-      &nbsp;&nbsp;
       <i class="large icons">
-        <i {{action "delete" dev}} class="window close outline icon"></i>
+        {{#link-to "developers.delete" dev}}<i class="window close outline icon"></i>{{/link-to}}
       </i>
     </tr>
   {{/each}}

@@ -8,14 +8,4 @@ export default Route.extend({
     return this.get('store').findAll('developer');
 
   },
-  actions:{
-     delete:function (dev) {
-       dev.destroyRecord();
-    },
-    cancelDeletion:function (deleteds) {
-      deleteds.forEach(
-        (developer)=>{developer.rollbackAttributes();}
-      );
-    },
-  }
 });

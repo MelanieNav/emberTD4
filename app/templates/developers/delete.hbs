@@ -1,0 +1,11 @@
+<form class="ui form">
+  <div class="field">
+    <label for="identity">Identity</label>
+    {{input id="identity" value=model.identity}}
+  </div>
+</form>
+<div class="ui segment">
+  <a {{action "delete" model}} class="ui positive button">Supprimer</a>
+  <a {{action "cancel" model}} class="ui button">Annuler</a>
+</div>
+{{outlet}}
