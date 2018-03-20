@@ -1,8 +1,9 @@
+/* eslint-env node */
 'use strict';
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'ember-td4',
+    modulePrefix: 'boards-app',
     environment,
     rootURL: '/',
     locationType: 'auto',
@@ -40,15 +41,15 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
-    ENV.APP.autoboot = false;
   }
 
   if (environment === 'production') {
     // here you can enable a production-specific feature
   }
+
   ENV.contentSecurityPolicy = {
-    'connect-src':"'self' http://127.0.0.1:8081"
-  }
+    'connect-src': "'self' http://127.0.0.1:8080"
+  };
 
   return ENV;
 };

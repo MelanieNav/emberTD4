@@ -1,14 +1,10 @@
-import Route from '@ember/routing/route';
+import DeleteRoute from '../delete-route';
 
-export default Route.extend({
-  actions: {
-    delete:function(dev) {
-      dev.destroyRecord();
-
-    },
-    cancel:function () {
-      this.modelFor("developers.delete").rollback();
-      this.transitionTo("developers");
-    }
+export default DeleteRoute.extend({
+  model(params){
+    return this.get('store').findRecord('developer',params.developer_id,{include:"projects"});
+  },
+  getRedirectRoute(){
+    return "developers";
   }
 });

@@ -1,30 +1,9 @@
 <h2 class="ui header">Projects</h2>
-{{#link-to "projects.new" class="ui button orange"}}Add new projects...{{/link-to}}
-<table class="ui single line table">
-  <thead>
-  <tr>
-    <th>Name</th>
-    <th>Descriptif</th>
-    <th>StartDate</th>
-    <th>DueDate</th>
-  </tr>
-  </thead>
-  <tbody>
-  {{#each model as |pro|}}
-    <tr>
-      <td>{{pro.name}}</td>
-      <td>{{pro.descriptif}}</td>
-      <td>{{pro.startDate}}</td>
-      <td>{{pro.dueDate}}</td>
-      <i class="large icons">
-        <i {{action "modify" model}} class="edit outline icon"></i>
-      </i>
-      &nbsp;&nbsp;
-      <i class="large icons">
-        <i {{action "delete" model}} class="window close outline icon"></i>
-      </i>
-    </tr>
-  {{/each}}
-  </tbody>
-</table>
+{{#link-to "projects.new" class="ui button"}}
+  <i class="ui plus icon"></i>
+  Add project...
+{{/link-to}}
+  <div class="ui divider"></div>
 {{outlet}}
+{{#ui-table elements=model.projects fields=model.fields operations=model.operations emptyMessage="No project to display"}}{{/ui-table}}
+
