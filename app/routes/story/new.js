@@ -12,9 +12,12 @@ export default Route.extend({
       developers: this.get('store').findAll('developer'),
       idDeveloper:[],
       idTags:[],
+      idSteps:[],
       tags: this.get('store').findAll('tag'),
       colors:['black','blue','green','orange','pink','purple','red','teal','yellow','positive','negative'],
-      tag: EmberObject.create({})
+      tag: EmberObject.create({}),
+      steps: this.get('store').findAll('step'),
+      step: EmberObject.create({})
     });
   },
   actions:{
