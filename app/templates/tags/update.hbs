@@ -1,0 +1,17 @@
+<div>
+  {{#ui-form oldValue=model.tag newValue=model.data  validation="save" cancel="cancel" smallIcon='edit' header='Tag' description='Editing an existing object'}}
+    <div class="field">
+      <label id="" class="" for="frmEdit-tag">Tag</label>
+      <div id="div-frmEdit-tag" class="ui input">
+        {{input id="frmEdit-tag" value=model.data.tag placeholder="Tag"}}
+      </div>
+    </div>
+    <div class="field">
+      <label id="" class="" for="frmEdit-color">Color</label>
+      <div id="div-frmEdit-color" class="ui input">
+        {{input id="frmEdit-color" value=model.data.color placeholder="Color"}}
+      </div>
+    </div>
+  {{/ui-form}}
+</div>
+{{outlet}}
