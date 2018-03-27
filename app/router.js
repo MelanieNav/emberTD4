@@ -32,15 +32,15 @@ Router.map(function() {
     this.route('delete',{ path: 'delete/:step_id' });
     this.route('update',{ path: 'update/:step_id' });
   });
-<<<<<<< HEAD
+
   this.route('stories', function() {
     this.route('new');
-=======
+  });
+
   this.route('tasks', function() {
     this.route('delete',{ path: 'delete/:task_id' });
     this.route('new');
     this.route('update',{ path: 'update/:task_id' });
->>>>>>> 94e469951fe888a6b69db020a519043f01da220f
   });
 });
 
