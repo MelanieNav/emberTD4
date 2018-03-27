@@ -1,0 +1,11 @@
+<div>
+  {{#ui-form newValue=model  validation="save" cancel="cancel" header='Step' description='Adding an object'}}
+    <div class="field">
+      <label id="" class="" for="frmEdit-title">Etat</label>
+      <div id="div-frmEdit-etat" class="ui input">
+        {{input id="frmEdit-etat" value=model.etat placeholder="Etat"}}
+      </div>
+    </div>
+  {{/ui-form}}
+</div>
+{{outlet}}
