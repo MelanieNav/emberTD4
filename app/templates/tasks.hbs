@@ -1,0 +1,13 @@
+<h2 class="ui header">Tasks</h2>
+{{#link-to "tasks.new" class="ui button"}}
+  <i class="ui plus icon"></i>
+  Add tasks...
+{{/link-to}}
+<div class="ui divider"></div>
+{{outlet}}
+{{#ui-table
+  elements=model.tasks
+  fields=model.fields
+  operations=model.operations
+  emptyMessage="No tasks to display"}}
+{{/ui-table}}
