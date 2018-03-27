@@ -1,0 +1,29 @@
+<div class="ui divider"></div>
+<div class="ui middle aligned divided list">
+  {{#each model.story as |story|}}
+    <div class="item">
+      <div class="right floated content">
+        <div class="ui left labeled button" tabindex="0">
+          <a class="ui basic right pointing label">
+            {{story.developer.identity}}
+          </a>
+          <div class="ui button">
+            <i class="user icon"></i> Update...
+          </div>
+        </div>
+      </div>
+      <i class="big file middle aligned icon"></i>
+      <div class="content">
+        <div class="header">
+          {{story.code}}
+        </div>
+        <div class="description">
+          {{story.description}}
+          {{#each story.tags as |tag|}}
+            <a class="ui {{tag.color}} label">{{tag.title}}</a>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
