@@ -1,3 +1,26 @@
-<div class="ui segment">Index</div>
-
+<div class="ui items">
+{{#each model.models  as |mod|}}
+  <div class="item">
+    <div class="image">
+      <i class="user"></i>
+    </div>
+    <div class="content">
+      <a class="header">{{mod.name}}</a>
+      <div class="meta">
+        <span>{{mod.objects.length}} éléments</span>
+      </div>
+      <div class="extra">
+        {{#link-to mod.lkAll class="ui button"}}
+          <i class="ui eye icon"></i>
+          See all
+        {{/link-to}}
+        {{#link-to mod.lkNew class="ui button"}}
+          <i class="ui plus icon"></i>
+          Add {{mod.name}}...
+        {{/link-to}}
+      </div>
+    </div>
+  </div>
+{{/each}}
+</div>
 {{outlet}}

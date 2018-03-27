@@ -32,6 +32,9 @@ Router.map(function() {
     this.route('delete',{ path: 'delete/:step_id' });
     this.route('update',{ path: 'update/:step_id' });
   });
+  this.route('stories', function() {
+    this.route('new');
+  });
 });
 
 export default Router;
