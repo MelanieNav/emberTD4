@@ -1,0 +1,30 @@
+<h2>Ajouter un projet</h2>
+<form class="ui form">
+  <div class="field">
+    <label for="name">Name</label>
+    {{input id="name" value=model.name}}
+  </div>
+  <div class="field">
+    <label for="descriptif">Descriptif</label>
+    {{input id="descriptif" value=model.descriptif}}
+  </div>
+  <div class="field">
+    <label for="startDate">startDate</label>
+    {{input id="startDate" type="date" value=model.startDate}}
+  </div>
+  <div class="field">
+    <label for="dueDate">dueDate</label>
+    {{input id="dueDate" type="date" value=model.dueDate}}
+  </div>
+  <div class="field">
+    <label for="owner">Owner</label>
+    {{input id="owner" value=model.owner}}
+  </div>
+</form>
+<div class="ui segment">
+  <a {{action "save" model}} class="ui positive button">Ajouter</a>
+  <a class="ui button">Annuler</a>
+</div>
+
+
+{{outlet}}
