@@ -1,3 +1,10 @@
+<h2 class="ui header">
+  <i class="folder open icon"></i>
+  <div class="content">
+    {{model.name}}
+    <div class="sub header">{{model.descriptif}}</div>
+  </div>
+</h2>
 {{#ui-form newValue=model.story  oldValue=model.oldProject validation="save" cancel="cancel" bigIcon='file' smallIcon='plus' header=model.project.name description='Adding a story in project'}}
 
   <div class="field">

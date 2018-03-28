@@ -1,29 +1,9 @@
-<div class="ui divider"></div>
-<div class="ui middle aligned divided list">
-  {{#each model.story as |story|}}
-    <div class="item">
-      <div class="right floated content">
-        <div class="ui left labeled button" tabindex="0">
-          <a class="ui basic right pointing label">
-            {{story.developer.identity}}
-          </a>
-          <div class="ui button">
-            <i class="user icon"></i> Update...
-          </div>
-        </div>
-      </div>
-      <i class="big file middle aligned icon"></i>
-      <div class="content">
-        <div class="header">
-          {{story.code}}
-        </div>
-        <div class="description">
-          {{story.description}}
-          {{#each story.tags as |tag|}}
-            <a class="ui {{tag.color}} label">{{tag.title}}</a>
-          {{/each}}
-        </div>
-      </div>
-    </div>
-  {{/each}}
-</div>
+<hr>
+<h1 class="ui header"><i class="calendar alternate icon"></i>Dashboard</h1>
+<h5>Progress of the project stories</h5>
+
+{{#ui-table
+  elements=model.steps
+  etat=model.etat
+  emptyMessage="No steps to display"}}
+{{/ui-table}}

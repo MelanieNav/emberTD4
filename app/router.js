@@ -37,6 +37,7 @@ Router.map(function() {
 
   this.route('stories', function() {
     this.route('new');
+    this.route('edit', {path:'edit/:story_id'});
   });
 
   this.route('tasks', function() {

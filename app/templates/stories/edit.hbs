@@ -1,0 +1,35 @@
+<div>
+  {{#ui-form oldValue=model.stories newValue=model.data  validation="save" cancel="cancel" smallIcon='edit' header='Story' description='Editing an existing object'}}
+    <div class="field">
+      <label id="" class="" for="frmEdit-story">Story</label>
+      <div id="div-frmEdit-story" class="ui input">
+        {{input id="frmEdit-story" value=model.data.code placeholder="Story"}}
+      </div>
+    </div>
+    <div class="field">
+      <label id="" class="" for="frmEdit-description">Description</label>
+      <div id="div-frmEdit-description" class="ui input">
+        {{input id="frmEdit-description" value=model.data.description placeholder="Description"}}
+      </div>
+    </div>
+    <div class="field">
+      <label id="" class="" for="frmEdit-developer">Developer</label>
+      <div id="div-frmEdit-developer" class="ui input">
+        {{input id="frmEdit-developer" value=model.data.developer placeholder="Developer"}}
+      </div>
+    </div>
+    <div class="field">
+      <label id="" class="" for="frmEdit-project">Project</label>
+      <div id="div-frmEdit-project" class="ui input">
+        {{input id="frmEdit-project" value=model.data.project placeholder="Project"}}
+      </div>
+    </div>
+    <div class="field">
+      <label id="" class="" for="frmEdit-tags">Tags</label>
+      <div id="div-frmEdit-tags" class="ui input">
+        {{input id="frmEdit-tags" value=model.data.tags placeholder="Tags"}}
+      </div>
+    </div>
+  {{/ui-form}}
+</div>
+{{outlet}}
